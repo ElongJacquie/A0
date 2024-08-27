@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
     strptime("1900-01-01","%Y-%m-%d",&min_tm2);
     if(difftime(mktime(&date_tm),mktime(&min_tm2)) < 0){
-        fprint(stderr,"Date must be after 1900-01-01.\n");
+        fprintf(stderr,"Date must be after 1900-01-01.\n");
          exit(EXIT_FAILURE);
     }
 
@@ -48,6 +48,6 @@ int main(int argc, char *argv[])
 }
 
 void print_usage(){
-   printf("Usage: ./weekday -t YYYY-MM-DD\n");
+   printf("Usage: ./a07_2 -t YYYY-MM-DD\n");
 }
 

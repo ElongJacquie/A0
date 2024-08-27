@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 
     strptime("2024-01-01","%Y-%m-%d",&min_tm1);
     if(difftime(mktime(&date_tm),mktime(&min_tm1)) < 0){
-        fprint(stderr,"Date must be after 2024-01-01.\n");
+        fprintf(stderr,"Date must be after 2024-01-01.\n");
          exit(EXIT_FAILURE);
     }
 
@@ -49,6 +49,6 @@ int main(int argc, char *argv[])
 }
 
 void print_usage(){
-   printf("Usage: ./weekday -t YYYY-MM-DD\n");
+   printf("Usage: ./a07_1 -t YYYY-MM-DD\n");
 }
 

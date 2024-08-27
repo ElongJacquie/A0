@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
           date_str = optarg;
           break;
       default:
-          fprintf(stderr,"Usage: ./weekday -t YYYY-MM-DD\n");
+          fprintf(stderr,"Usage: ./a07_3 -t YYYY-MM-DD\n");
           exit(EXIT_FAILURE);
         }
     }
@@ -48,7 +48,7 @@ int zellers_congruence(int day, int month, int year){
    }
 
    begin_year = year / 100;
-   end_yrar = year - (begin_year*100);
+   end_year = year - (begin_year*100);
 
    result = day+(2.6*(month+1))+(begin_year/4)+(5*begin_year+end_year)+(end_year/4);
 
