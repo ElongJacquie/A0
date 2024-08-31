@@ -9,13 +9,14 @@
 
 void yug_maj(char *satz);
 void yug_min(char *satz);
+void reverse_string(char *str);
 
 int main(int argc, char *argv[])
 {
 
 int opt; int j; char buffer[BUFFER_SIZE];
-int maj = 0 ;int min =0;
-while((opt = getopt(argc,argv,"ul")) !=-1){
+int maj = 0 ;int min =0;int reverse =0;
+while((opt = getopt(argc,argv,"ulr")) !=-1){
 
     switch(opt){
 
@@ -26,7 +27,11 @@ while((opt = getopt(argc,argv,"ul")) !=-1){
   case 'l':
     min = 1;
     break;
-
+    
+  case 'r':
+    reverse = 1;
+    break;
+    
   default:
     fprintf(stderr, "fehler\n");
 
@@ -43,7 +48,9 @@ while((opt = getopt(argc,argv,"ul")) !=-1){
     yug_min(buffer);
 
   }
-
+  if (reverse) {
+    reverse_string(buffer);
+  }
   printf("text bearbeitet %s\n",buffer);
  }
  close (j);
@@ -67,3 +74,11 @@ while(*satz){
 }
 }
 
+void reverse_string(char *str) {
+    int len = strlen(str);
+    for (int i = 0; i < len / 2; i++) {
+        char temp = str[i];
+        str[i] = str[len - i - 1];
+        str[len - i - 1] = temp;
+    }
+}

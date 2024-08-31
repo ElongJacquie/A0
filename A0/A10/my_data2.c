@@ -13,10 +13,7 @@ GtkListStore *store;
 //3- sudo dnf install gtk3-devel
 //4- sudo dnf install gtk3-devel
 
-//Compiler
-//gcc -o editeur_csv editeur_csv.c $(pkg-config --cflags --libs gtk+-3.0)
-//Execution
-//./editeur_csv
+
 // Function to read the CSV file
 void read_csv(const char *filename) {
     FILE *file = fopen(filename, "r");
