@@ -10,4 +10,4 @@ enthalten.
 • Die Library sollte eine Funktion zum Ausgeben der COMP Elemente in
 Eulerform beinhalten.
 
-fuer die Kompilierund des Programms haben wir den Befehl "gcc -o test_program test_program.c -lcomplex -lm" benutzt. 
+fuer die Kompilierung des Programms haben wir den Befehl "gcc -o test_program test_program.c -lcomplex -lm" benutzt. 
